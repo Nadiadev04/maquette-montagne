@@ -1,0 +1,58 @@
+.infos{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 108px);
+        border-left: 1px solid rgb(105, 105, 105);
+
+        @media screen and (max-width:700px) {
+            border-left: none;
+         }
+        
+
+    .blocinfo{
+       display: grid;
+       grid-template-columns: 30%  70%;
+       text-align: center;
+       border-bottom: 1px solid rgb(105, 105, 105);
+
+       @media screen and (max-width:700px) {
+        border-bottom: none;
+        border-top: 1px solid rgb(105, 105, 105);
+     }
+
+       h3, .bloct{
+        margin: 62px 0;
+       }
+       .bloct{
+        p{
+            text-align: left;
+        }
+        .reseausociaux{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+              li{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid rgb(105, 105, 105);
+                height: 34px;
+                width: 34px;
+                border-radius: 50%;
+                  a{
+                      color: inherit; 
+                      transition: 0.2s;
+
+                      &:hover{
+                         color: rgb(112, 140, 216);
+                         cursor: pointer;
+                      }
+                     
+                  }
+                  
+              }
+             }
+        
+       }
+    }
+}

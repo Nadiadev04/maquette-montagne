@@ -1,0 +1,135 @@
+main{
+    .main-container{
+        width: 70%;
+        margin: 0 auto;
+        background:$white1;
+       
+        .bloc-haut{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            
+            .bloc-text{
+                width: 70%;
+                span{
+                        @include  childcenter;
+                         text-transform: uppercase;
+                         font-size: 0.85em;
+                         position: relative;
+                         font-family: $font2;
+                         padding: 70px 0;
+                         
+                         &::before,
+                         &::after{
+                             content: "";
+                             position: absolute;
+                             height: 1px;
+                             width:37%;
+                             background: rgb(182, 179, 179);
+                             transform: translateY(50%);
+                          
+                             @media screen and (max-width: 700px) {
+                                width: 24%;
+                             }
+                           } 
+                           &::before{
+                            left: 0;
+                           }
+                           &::after{
+                            right: 0; 
+                           }
+                        }
+                  
+                     h2{
+                        @include styleh2;
+                        font-size: 1.4em;
+                        font-family: $font1
+                     }
+                     .prphe{
+                        @include styleprghe;
+                        font-family: $font2;
+                        text-align: left;
+
+                        @media screen and (max-width:700px) {
+                           text-align: center;
+                           font-size: 0.74em;
+                         }
+                     }
+                 }
+                 .bloc-image{
+                    background: url(./../../../images/pic01.jpg) center/cover;
+                    width: 84%;
+                    height: 466px;
+                    padding: 20px;
+                  
+                }
+                button{
+                    @include button ;
+                    margin: 50px 0 90px;
+                }
+            
+           
+        }
+        .bloc-bas{
+            display: grid;
+            grid-template-columns: 50% 
+            50%;
+            border-top:1px solid rgb(105, 105, 105) ;
+            
+            @media screen and (max-width: 700px) {
+                grid-template-columns: 1fr;
+            }
+            .bloc{
+                @include  childcenter;padding: 60px;
+
+                @media screen and (max-width: 700px ) {
+                    padding: 34px;
+                 }
+                .datebloc{
+                    text-transform: uppercase;
+                    font-size: 0.8em;
+                    text-align: center
+                    
+                }
+                h3{
+                    @include styleh2;
+                    font-size: 1em;
+                    text-align: center;
+                    font-family: $font1;
+                }
+                 .img{
+                    background: url(./../../../images/pic02.jpg) center/cover;
+                    width: 84%;
+                    height: 400px;
+                 }
+                 p{
+                    @include styleprghe;
+                    width: 85%;
+                    text-align: left;
+                    margin-top: 15px;
+                    font-family: $font2;
+
+                    @media screen and (max-width:700px) {
+                        text-align: center;
+                        font-size: 0.75em;
+                     }
+                 }
+                 button{
+                    @include button;
+                 }
+            }
+            .bloc2{
+                border-left:1px solid rgb(105, 105, 105) ;
+
+                @media screen and (max-width:700px) {
+                    border-left: none;
+                    border-top: 1px solid rgb(105, 105, 105);
+                 }
+                .img{
+                    background: url(./../../../images/pic03.jpg)center/cover;
+                }
+            }
+        }
+    }
+}

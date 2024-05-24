@@ -1,0 +1,54 @@
+footer{
+    margin-top: 25px;
+    .contact{
+      width: 70%;  
+      margin: 0 auto;
+      background: White;
+      margin-bottom: 20px;
+      display: grid;
+      grid-template-columns: repeat(2,50%);
+      border-top: 1px solid rgb(105, 105, 105);
+
+     @media screen and (max-width: 700px ) {
+        grid-template-columns: 1fr;
+     }
+      form{
+            padding: 60px 50px;
+            gap: 18px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 18px 45px 18px 45px 18 200px 1fr;
+            
+            input[type='text'],input[type='email'],textarea{
+                padding: 5px;
+            }
+            label{
+                text-transform: uppercase;
+                font-size: 0.8em;
+            }
+
+          textarea{
+            resize: none;
+          }
+        
+         div{
+            @media screen and (max-width: 700px ) {
+                margin: 0 auto;
+             }
+            .submit{
+            padding: 10px 15px;
+            background: transparent;
+            border: 1px solid rgb(138, 136, 136);
+            text-transform: uppercase;
+            font-size: 0.7em;
+            color: black;
+            
+           
+        }
+          
+         }   
+        
+      }
+    }
+    
+}
